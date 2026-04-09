@@ -18,4 +18,10 @@ namespace CRUDMahasiswaADO
     {
         private readonly SqlConnection conn;
         private readonly string connectionString = "Data Source=FADLANNASRIZAL\\FADLAN;Initial Catalog=DBAkademikADO;Integrated Security=True";
+        public FormMahasiswa()
+        {
+            InitializeComponent();
+            conn = new SqlConnection(connectionString);
+        }
+
         
