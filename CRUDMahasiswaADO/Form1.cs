@@ -10,3 +10,12 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq.Expressions;
+
+
+namespace CRUDMahasiswaADO
+{
+    public partial class FormMahasiswa : Form
+    {
+        private readonly SqlConnection conn;
+        private readonly string connectionString = "Data Source=FADLANNASRIZAL\\FADLAN;Initial Catalog=DBAkademikADO;Integrated Security=True";
+        
