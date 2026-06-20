@@ -138,7 +138,13 @@ namespace CRUDMahasiswaADO
             }
         }
 
-     
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            button = 1;
+            loadDataChart();
+        }
+
+      
         }
     }
 }
