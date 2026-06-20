@@ -20,6 +20,34 @@ namespace CRUDMahasiswaADO
             return connectionString;
         }
 
+        SqlConnection conn = new SqlConnection(connectionString);
+
+        SqlDataAdapter da;
+        DataTable dtMahasiswa;
+        DataTable dtProdi;
+
+        public static string GetLoacalIPAddress()
+        {
+            string localIP = string.Empty;
+            try
+            {
+                var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
+                foreach (var ip in host.AddressList)
+                {
+                    if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                    {
+                        localIP = ip.ToString();
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting local IP address: " + ex.Message);
+            }
+            return localIP;
+        }
+
         
     }
 }
