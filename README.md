@@ -7,7 +7,7 @@ Tugas ini berisi *source code* aplikasi CRUD Mahasiswa berbasis ADO.NET beserta 
 * **Video Demo Aplikasi:** [https://drive.google.com/file/d/1IfKmL9_5o7xoq93rBrbzdXH_wMAABp6p/view?usp=sharing]
 
 ## 🛠️ Detail Paket Installer
-* **Nama Setup:** SiMasterSetup.exe
+* **Nama Setup:** FadlanSiMasterSetup.exe
 * **Fitur Otomatisasi:** Installer ini sudah dilengkapi script `sqlcmd` otomatis untuk membuat database `DBAkademikADO`, mengonfigurasi tabel, alias (`synonym`), dan *Stored Procedure* secara mandiri pada SQL Server laptop target.
 
 ## 👥 Identitas Mahasiswa
