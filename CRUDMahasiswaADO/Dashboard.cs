@@ -18,6 +18,11 @@ namespace CRUDMahasiswaADO
         DataTable dt;
         int button = 0;
 
+        public DataMahasiswa()
+        {
+            InitializeComponent();
+        }
+
         
     }
 }
