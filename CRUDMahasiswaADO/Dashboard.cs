@@ -23,6 +23,36 @@ namespace CRUDMahasiswaADO
             InitializeComponent();
         }
 
-        
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            dtpTanggalMasuk.MinDate = new DateTime(2000, 1, 1);
+            dtpTanggalMasuk.Format = DateTimePickerFormat.Custom;
+            dtpTanggalMasuk.CustomFormat = "yyyy";
+            dtpTanggalMasuk.ShowUpDown = true;
+            dtpTanggalMasuk.MaxDate = DateTime.Now;
+
+            cmbTipe.DropDownStyle = ComboBoxStyle.DropDownList;
+            var items = new List<KeyValuePair<string, SeriesChartType>>
+            {
+                new KeyValuePair<string, SeriesChartType>("Kolom", SeriesChartType.Column),
+                new KeyValuePair<string, SeriesChartType>("Pie", SeriesChartType.Pie)
+            };
+
+            isInitializing = true;
+
+            cmbTipe.DataSource = items;
+            cmbTipe.DisplayMember = "Key";
+            cmbTipe.ValueMember = "Value";
+            cmbTipe.SelectedIndex = 0;
+
+            isInitializing = false;
+            loadDataChart();
+        }
+
     }
 }
