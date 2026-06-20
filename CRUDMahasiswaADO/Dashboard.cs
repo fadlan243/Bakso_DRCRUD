@@ -123,6 +123,22 @@ namespace CRUDMahasiswaADO
             chartProdi.Legends.Add(legend);
         }
 
+        private void cmbTipe_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (isInitializing)
+                return;
+
+            if (button == 1)
+            {
+
+            }
+            else
+            {
+                loadDataChart();
+            }
+        }
+
+     
         }
     }
 }
